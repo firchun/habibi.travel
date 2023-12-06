@@ -24,7 +24,8 @@
     <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
 </head>
 
-<body class="bg-gradient-primary min-vh-100 d-flex justify-content-center align-items-center">
+<body class=" min-vh-100 d-flex justify-content-center align-items-center"
+    style="background:linear-gradient(to bottom, rgb(255, 159, 121), rgb(255, 72, 0))">
 
     @yield('main-content')
 

@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontController;
+use App\Http\Controllers\GaleriController;
+use App\Models\Galeri;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +17,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/', [FrontController::class, 'index']);
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//galeri
+Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri');
 
 Route::get('/profile', 'ProfileController@index')->name('profile');
 Route::put('/profile', 'ProfileController@update')->name('profile.update');
