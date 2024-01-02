@@ -29,20 +29,28 @@
                                 <div class="unit unit-spacing-xs">
                                     <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
                                     <div class="unit-body">
-                                        <p>08:00<span>am</span> — 04:30<span>pm</span></p>
+                                        <p> <span>{{ Carbon\Carbon::parse($setting->time_open)->format('H:i a') }} —
+                                                {{ Carbon\Carbon::parse($setting->time_closed)->format('H:i a') }}</span>
+                                        </p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="unit unit-spacing-xs">
                                     <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                                    <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a>
+                                    <div class="unit-body"><a class="link-phone"
+                                            href="tel:{{ $setting->phone }}">{{ $setting->phone }}</a>
                                     </div>
                                 </div>
                             </li>
-                        </ul><a class="button button-md button-default-outline-2 button-ujarak"
-                            href="{{ route('login') }}">
-                            Sign In</a>
+                        </ul>
+                        @guest
+                            <a class="button button-md button-default-outline-2 button-ujarak" href="{{ route('login') }}">
+                                Sign In</a>
+                        @else
+                            <a class="button button-md button-default-outline-2 button-ujarak" href="{{ route('home') }}">
+                                Dashboard</a>
+                        @endguest
                     </div>
                 </div>
             </div>

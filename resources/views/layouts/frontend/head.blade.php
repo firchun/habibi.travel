@@ -1,10 +1,15 @@
 <head>
-    <title>Home</title>
+    <title>{{ $title }} | {{ env('APP_NAME' ?? 'Habibi Travel') }}</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="description" content="Website Resmi Habibi Travel">
+    <meta name="keywords"
+        content="Habibi Travel, Travel Merauke, Papua Selatan, Tour, Jastip, Lion Parcel, PT Habibi Aero Nusantara, PT Habibi, Jastip Murah, Pengiriman Murah">
+    <meta name="author" content="Habibi Travel, Firmansyah Diana">
+    <meta name="robots" content="index, follow">
     <link rel="icon" href="{{ asset('img/') }}/favicon.png" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css"

@@ -10,7 +10,8 @@
                                 <li>
                                     <div class="unit">
                                         <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                                        <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a>
+                                        <div class="unit-body"><a class="link-phone"
+                                                href="tel:{{ $setting->phone }}">{{ $setting->phone }}</a>
                                         </div>
                                     </div>
                                 </li>
@@ -18,14 +19,14 @@
                                     <div class="unit">
                                         <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
                                         <div class="unit-body"><a class="link-aemail"
-                                                href="mailto:#">info@demolink.org</a></div>
+                                                href="mailto:{{ $setting->email }}">{{ $setting->email }}</a></div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="unit">
                                         <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                                        <div class="unit-body"><a class="link-location" href="#">4730 Crystal
-                                                Springs Dr, Los Angeles, CA 90027</a></div>
+                                        <div class="unit-body"><a class="link-location"
+                                                href="#">{{ $setting->address }}</a></div>
                                     </div>
                                 </li>
                             </ul>
@@ -33,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
-                    <div class="oh-desktop">
+                    {{-- <div class="oh-desktop">
                         <div class="wow slideInDown" data-wow-delay="0s">
                             <h6 class="text-spacing-100 text-uppercase">Popular news</h6>
                             <!-- Post Minimal 2-->
@@ -53,25 +54,21 @@
                                 </div>
                             </article>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
-                <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
+                {{-- <div class="col-sm-11 col-md-7 col-lg-5 col-xl-4">
                     <div class="oh-desktop">
                         <div class="wow slideInLeft" data-wow-delay="0s">
                             <h6 class="text-spacing-100 text-uppercase">Quick links</h6>
                             <ul class="row-6 list-0 list-marked list-marked-md list-marked-secondary list-custom-2">
                                 <li><a href="about.html">About us</a></li>
-                                <li><a href="#">Our Tours</a></li>
                                 <li><a href="#">Our Team</a></li>
                                 <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Blog</a></li>
                             </ul>
-                            <div class="group-md group-middle justify-content-sm-start"><a
-                                    class="button button-lg button-primary button-ujarak" href="#">Get in
-                                    touch</a></div>
+
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

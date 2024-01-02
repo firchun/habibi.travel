@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->enum('type', ['galeri', 'slider']);
+            $table->enum('type', ['galeri', 'slider', 'discover']);
             $table->foreignId('id_user');
             $table->timestamps();
 

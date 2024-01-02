@@ -12,6 +12,9 @@
                 <li class="rd-nav-item @if (request()->is('/')) active @endif"><a class="rd-nav-link"
                         href="{{ url('/') }}">Home</a>
                 </li>
+                <li class="rd-nav-item @if (request()->is('hot_article')) active @endif"><a class="rd-nav-link"
+                        href="{{ url('/hot_article') }}">Article</a>
+                </li>
             </ul>
         </div>
     </div>
